@@ -200,3 +200,7 @@ form{
     right: 10px;
 
 }
+.btn.delete:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}

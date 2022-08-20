@@ -36,15 +36,15 @@
     </div>
 
 
-    <div class="todo-list">
+    <div class="todo-list" data-list-display-container>
 
         <div class="todo-header">
-            <h2 class="todo-title">Youtube</h2>
-            <p class="task-count">3 tasks remaining</p>
+            <h2 class="todo-title" data-list-title>Your tasks</h2>
+            <p class="task-count" data-list-count></p>
         </div>
         <div class="todo-body">
-            <div class="tasks">
-                <div class="task">
+            <div class="tasks" data-tasks>
+                <!-- <div class="task">
                     <input 
                     type="checkbox"
                     id="task-1"
@@ -54,10 +54,10 @@
 
                         </span>
                         task1 created</label>
-                </div>
+                </div> -->
                 <!-- task1 completed -->
 
-            <div class="task">
+            <!-- <div class="task">
                 <input 
                 type="checkbox"
                 id="task-2"
@@ -66,8 +66,8 @@
                     <span class="custom-checkbox">
                     </span>
                     task2 created</label>
-            </div>
-            <div class="task">
+            </div> -->
+           <!--  <div class="task">
                 <input 
                 type="checkbox"
                 id="task-3"
@@ -77,15 +77,16 @@
                         
                     </span>
                     third task</label>
+            </div> -->
             </div>
-            </div>
-            <div class="newtaskcreator">
-                <form action="">
+            <div class="new-task-creator">
+                <form action="" data-new-task-form>
                     <input 
                     type="text"
                     class="new task"
                     placeholder="new task name"
                     aria-label="new task name"
+                    data-new-input
                     >
                     <button class="btn create"
                     aria-label="create new task">
@@ -95,9 +96,19 @@
             </div>
             <div class="delete-stuff">
                 <button class="btn delete">clear completed tasks</button>
-                <button class="btn delete">Delete stuff</button>
+                <button class="btn delete" data-delete-list-button>Delete stuff</button>
             </div>
         </div>
     </div>
+
+    <template id="task-template">
+        <div class="task">
+            <input 
+            type="checkbox">            >
+            <label>
+                <span class="custom-checkbox"></span>
+            </label>
+        </div>
+    </template>
 </body>
 </html>
